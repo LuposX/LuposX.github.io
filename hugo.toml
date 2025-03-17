@@ -1,0 +1,42 @@
+baseURL = 'https://LuposX.github.io/'
+languageCode = 'en-us'
+theme = ["mytheme", "hugo-shortcode-gallery"]
+
+[Author]
+  name = "LuposX"
+
+[params]
+  title = "Notes from the Wired"
+  favicon = "note_4371209.png"
+  rss = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+
+[frontmatter]
+  lastmod = ["lastmod", ":fileModTime"]
+
+# This is needed so, that I can render latex with the help of mathjax
+[markup.goldmark.extensions.passthrough]
+enable = true
+  [markup.goldmark.extensions.passthrough.delimiters]
+  block = [ [ "\\[", "\\]" ], [ "$$", "$$" ] ]
+  inline = [ [ "\\(", "\\)" ], ["$", "$"] ]
+
+
+pygmentsUseClasses = true
+pygmentsCodefences = true
+
+[markup.highlight]
+  codeFences = true
+  guessSyntax = true
+  lineNoStart = 1
+  lineNos = true
+  lineNumbersInTable = false
+  tabWidth = 4
+  noClasses = false
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
