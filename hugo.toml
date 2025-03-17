@@ -1,4 +1,4 @@
-baseURL = 'https://LuposX.github.io/'
+baseURL = 'https://luposx.github.io/'
 languageCode = 'en-us'
 theme = ["mytheme", "hugo-shortcode-gallery"]
 
